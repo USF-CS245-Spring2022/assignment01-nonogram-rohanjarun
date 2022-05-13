@@ -11,6 +11,7 @@ public class Lab02{
   //@param double array of integers that represent the rows
   //@returns double boolean array of solution
   public static boolean[][] solveNonogram(int[][] columns, int[][] rows) {
+    //[TODO: your solution]
     boolean[][] board = new boolean[rows.length][columns.length];
     return recursion(columns, rows, board, 0, 0);
   }
@@ -159,6 +160,7 @@ public class Lab02{
 
 //main with test numbers
   public static void main(String[] args){
+    //test your code
     int[][] columns = {{1,1}, {1,3}, {1,3}, {2,1}, {2,1}, {2,2}, {1,3}, {2,1}};
     int[][] rows = {{1,1}, {1,3}, {2,3}, {4,1}, {2,2}, {1,6}};
 
