@@ -28,9 +28,9 @@ public class Lab02{
   public static boolean[][] recursion(int[][] columns, int[][] rows, boolean[][] board, int index_row, int index_col) {
 
     int next_row = 0;
-
+    //declaring row
     int next_col = 0;
-
+    //declaring column
     if (index_row == rows.length) {
 
       return board;
@@ -41,7 +41,7 @@ public class Lab02{
       next_row = index_row;
       next_col = index_col + 1;
     }
-
+      //recursive call to solve the board
     System.out.println("row = " + index_row + ", column = " + index_col + ", next_row = " + next_row + ", next_col = " + next_col);
 
 
@@ -79,7 +79,7 @@ public class Lab02{
 
     col_restrict[0] = columns[index_col][0];
     col_restrict[1] = columns[index_col][1];
-
+    //checks to see if the placement is safe
 
     int restrict_index = 0;
 
@@ -89,7 +89,7 @@ public class Lab02{
     if (row_restrict[restrict_index] == 0) {
       restrict_index++;
     }
-
+    //counter for index col
     for (int i = 0; i <= index_col; i++) {
       boolean current_bool = board[index_row][i];
 
@@ -113,7 +113,7 @@ public class Lab02{
           return false;
         }
       }
-
+    //sets the previous to the current value
       previous_bool = current_bool;
     }
 
@@ -157,7 +157,7 @@ public class Lab02{
   }
 
 
-
+//main with test numbers
   public static void main(String[] args){
     int[][] columns = {{1,1}, {1,3}, {1,3}, {2,1}, {2,1}, {2,2}, {1,3}, {2,1}};
     int[][] rows = {{1,1}, {1,3}, {2,3}, {4,1}, {2,2}, {1,6}};
